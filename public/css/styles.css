@@ -36,3 +36,16 @@ a {
 .menu-text {
     font-weight: normal !important;
 }
+
+.dropdown.menu {
+    font-size: small;
+}
+
+.card {
+    background-color: rgb(155, 155, 155);
+    border: 1px solid black;
+}
+
+.card-container {
+    display:flex;
+}
