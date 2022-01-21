@@ -77,6 +77,15 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        name: "So Ba Vietnamese Restuarant",
+        location: "560 Gresham Ave SE, Atlanta, GA 30316",
+        review: "641",
+        stars: 4.4,
+        price: "$",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 

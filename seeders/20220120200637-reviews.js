@@ -362,6 +362,41 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        name: "Tani Jesus Garcia",
+        review:
+          "Great food, great service,  server was very good and knowledge of menu, manager (I assume) came to our table and other tables around making sure everything was OK. Love the appetizer we had: Dau Hu Rang Muoi.",
+        stars: 5,
+        reviewsid: 9,
+      },
+      {
+        name: "Collette Alex",
+        reveiw:
+          "Let me first start off by saying we absolutely love this place and have been going there for the past seven years. Their food is good and I don’t have a complaint about the taste and quality of their food, but what I do have to complain about is the portions. Please do better and consistent about portions with take out!",
+        stars: 4,
+        reviewsid: 9,
+      },
+      {
+        name: "Rhett Wilkins",
+        review:
+          "Always amazing and quality control is top notch. Best pho in ATL, hands down. Keep it up! Com bo luc lac and pho ga are my go-to and they never cease to amaze me. So Ba is like a box of chocolates except you always know what you're going to get, and that's excellency!",
+        stars: 5,
+        reviewsid: 9,
+      },
+      {
+        name: "Matt McWilliams",
+        review:
+          "Love their roast pork and shrimp bun, and spicy salt and pepper tofu.  So much is changing in EAV I’m thankful to still have Soba and that they’re expanding with a snazzy new deck. Always top notch service from their staff, just awesome all around.",
+        stars: 5,
+        reviewsid: 9,
+      },
+      {
+        name: "Adam Yost",
+        reivew:
+          "I could eat here almost every day. Their broth is rich and flavorful, the meats are perfect, and  that salt & pepper tofu changed my mind on tofu as a whole. Highly recommend",
+        stars: 5,
+        reviewsid: 9,
+      },
     ]);
   },
 
