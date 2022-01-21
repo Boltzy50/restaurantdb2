@@ -49,3 +49,14 @@ a {
 .card-container {
     display:flex;
 }
+
+.login-box {
+    box-shadow: 0 2px 4px rgba(10, 10, 10, 0.4);
+    background: #aaaaaa;
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  /* .login-box {
+
+  } */
