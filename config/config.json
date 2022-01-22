@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "postgres",
-    "password": "J14791g!",
+    "password": "password",
     "database": "restaurant_full_stack",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "password",
     "database": "restaurant_full_stack",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "root",
-    "password": null,
+    "password": "password",
     "database": "restaurant_full_stack",
     "host": "127.0.0.1",
     "dialect": "postgres"
