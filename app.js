@@ -5,25 +5,11 @@ const port = 3000;
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
-app.use(cookieParser());
-app.use(
-  session({
-    secret: "secret", //used to sign the cookie
-    resave: false, //update session w/ no changes
-    saveUninitialized: true, //always create a session
-    cookie: {
-      secure: false, //true: only accept https req's
-      maxAge: 2592000,
-    },
-  })
-);
-
-// Connection to DB
-const { Sequelize } = require("sequelize");
-const db = new Sequelize("restaurant_full_stack", "postgres", "J14791g!", {
-  host: "127.0.0.1",
-  dialect: "postgres",
-});
+// database
+const db = require("./config/database");
+const models = require("./models");
+const res = require("express/lib/response");
+const req = require("express/lib/request");
 
 // test DB
 db.authenticate()
@@ -37,8 +23,24 @@ app.use(express.static("views"));
 app.set("view engine", "ejs");
 app.set("views", "views");
 
-app.get("/", (req, res) => {
-  res.render("pages/index");
+app.use(cookieParser());
+app.use(
+  session({
+    secret: "secret", //used to sign the cookie
+    resave: false, //update session w/ no changes
+    saveUninitialized: true, //always create a session
+    cookie: {
+      secure: false, //true: only accept https req's
+      maxAge: 2592000,
+    },
+  })
+);
+
+app.get("/", async (req, res) => {
+  const restaurants = await models.Restaurants.findAll();
+  res.render("pages/index", {
+    restaurants: restaurants,
+  });
 });
 
 app.get("/login", (req, res) => {
@@ -73,8 +75,8 @@ app.get("/expensive", (req, res) => {
   res.render("pages/expensive");
 });
 
-app.get("/VeryExpensive", (req, res) => {
-  res.render("pages/VeryExpensive");
+app.get("/veryexpensive", (req, res) => {
+  res.render("pages/veryexpensive");
 });
 
 app.listen(port, () => {
