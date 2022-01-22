@@ -6,7 +6,7 @@ module.exports = {
       {
         name: "Bones Restaurant",
         location: "3130 Piedmont Rd NE, Atlanta, GA 30305",
-        review: "1,970",
+        reviews: "1,970",
         stars: 4.6,
         price: "$$$$",
         createdAt: new Date(),
@@ -15,7 +15,7 @@ module.exports = {
       {
         name: "South City Kitchen Buckhead",
         location: "3350 Peachtree Rd NE Suite 175, Atlanta, GA 30326",
-        review: "1,617",
+        reviews: "1,617",
         stars: 4.5,
         price: "$$$",
         createdAt: new Date(),
@@ -25,7 +25,7 @@ module.exports = {
         name: "Bacchanalia",
         location:
           "1460 Ellsworth Industrial Blvd NW Suite 1, Atlanta, GA 30318",
-        review: "648",
+        reviews: "648",
         stars: 4.7,
         price: "$$$$",
         createdAt: new Date(),
@@ -34,7 +34,7 @@ module.exports = {
       {
         name: "Marcel",
         location: "1170 Howell Mill Rd, Atlanta, GA 30318",
-        review: "1,054",
+        reviews: "1,054",
         stars: 4.7,
         price: "$$$$",
         createdAt: new Date(),
@@ -43,7 +43,7 @@ module.exports = {
       {
         name: "Trader Vic's",
         location: "255 Courtland St NE, Atlanta, GA 30303",
-        review: "575",
+        reviews: "575",
         stars: 4.2,
         price: "$$$",
         createdAt: new Date(),
@@ -52,7 +52,7 @@ module.exports = {
       {
         name: "Nikolai's Roof",
         location: "255 Courtland St NE, Atlanta, GA 30303",
-        review: "451",
+        reviews: "451",
         stars: 4.4,
         price: "$$$$",
         createdAt: new Date(),
@@ -62,7 +62,7 @@ module.exports = {
         name: "Aviva by Kameel",
         location:
           "225 Peachtree St NE Inside the Mall of Peachtree Center, Atalnta, GA 30303",
-        review: "800",
+        reviews: "800",
         stars: 5,
         price: "$$",
         createdAt: new Date(),
@@ -71,7 +71,16 @@ module.exports = {
       {
         name: "Dakota Blue",
         location: "454 Cherokee Ave SE, Atlanta, GA 30312",
-        review: "502",
+        reviews: "502",
+        stars: 4.4,
+        price: "$",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "So Ba Vietnamese Restuarant",
+        location: "560 Gresham Ave SE, Atlanta, GA 30316",
+        reviews: "641",
         stars: 4.4,
         price: "$",
         createdAt: new Date(),
