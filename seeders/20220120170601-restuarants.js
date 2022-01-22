@@ -11,6 +11,8 @@ module.exports = {
         price: "$$$$",
         createdAt: new Date(),
         updatedAt: new Date(),
+        typeOfFood: "SteakHouse",
+        picture: "/img/Bones-Restaurant.jpg",
       },
       {
         name: "South City Kitchen Buckhead",
@@ -20,6 +22,8 @@ module.exports = {
         price: "$$$",
         createdAt: new Date(),
         updatedAt: new Date(),
+        typeOfFood: "Southern Classics",
+        picture: "/img/South-City-Kitchen-Buckhead.jpg",
       },
       {
         name: "Bacchanalia",
@@ -30,6 +34,8 @@ module.exports = {
         price: "$$$$",
         createdAt: new Date(),
         updatedAt: new Date(),
+        typeOfFood: "Season New American",
+        picture: "/img/bacchanalia.jpg",
       },
       {
         name: "Marcel",
@@ -39,6 +45,8 @@ module.exports = {
         price: "$$$$",
         createdAt: new Date(),
         updatedAt: new Date(),
+        typeOfFood: "SteakHouse",
+        picture: "img/marcel.jpg",
       },
       {
         name: "Trader Vic's",
@@ -48,6 +56,8 @@ module.exports = {
         price: "$$$",
         createdAt: new Date(),
         updatedAt: new Date(),
+        typeOfFood: "Pacific Rim",
+        picture: "img/trader-vics.jpg",
       },
       {
         name: "Nikolai's Roof",
@@ -57,6 +67,8 @@ module.exports = {
         price: "$$$$",
         createdAt: new Date(),
         updatedAt: new Date(),
+        typeOfFood: "French-Russian",
+        picture: "img/nikolai's-roof.jpg",
       },
       {
         name: "Aviva by Kameel",
@@ -67,6 +79,8 @@ module.exports = {
         price: "$$",
         createdAt: new Date(),
         updatedAt: new Date(),
+        typeOfFood: "Mediterranean",
+        picture: "/img/aviva.jpg",
       },
       {
         name: "Dakota Blue",
@@ -76,6 +90,8 @@ module.exports = {
         price: "$",
         createdAt: new Date(),
         updatedAt: new Date(),
+        typeOfFood: "Mexican-Cuban",
+        picture: "/img/dakota-blue.jpg",
       },
       {
         name: "So Ba Vietnamese Restuarant",
@@ -85,6 +101,8 @@ module.exports = {
         price: "$",
         createdAt: new Date(),
         updatedAt: new Date(),
+        typeOfFood: "Vietnamese",
+        picture: "/img/So-ba.jpg",
       },
     ]);
   },
