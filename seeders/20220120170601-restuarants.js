@@ -46,7 +46,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         typeOfFood: "SteakHouse",
-        picture: "img/marcel.jpg",
+        picture: "/img/marcel.jpg",
       },
       {
         name: "Trader Vic's",
@@ -57,7 +57,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         typeOfFood: "Pacific Rim",
-        picture: "img/trader-vics.jpg",
+        picture: "/img/trader-vics.jpg",
       },
       {
         name: "Nikolai's Roof",
@@ -68,7 +68,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         typeOfFood: "French-Russian",
-        picture: "img/nikolai's-roof.jpg",
+        picture: "/img/nikolai's-roof.jpg",
       },
       {
         name: "Aviva by Kameel",
