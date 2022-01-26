@@ -15,6 +15,24 @@
         <%- include('../partials/header') %>
     </header>
 
+    <div class="flex-container" id="card-container">
+        <% for(let restaurant of restaurants) { %>
+            <div class="card" style="width: 30%;">
+                <div class="card-divider">
+                    <%= restaurant.name %>
+                </div>
+                <img src="<%= restaurant.picture  %> ">
+                <div class="card-section">
+                    <h5>
+                        <%= restaurant.typeOfFood %>
+                    </h5>
+                    <p>
+                        <%= restaurant.location %>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+    </div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
