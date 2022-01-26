@@ -63,6 +63,7 @@ app.get("/login", (req, res) => {
 //     });
 // });
 
+// INEXPENSIVE START
 app.get("/inexpensive", async (req, res) => {
   const restaurants = await models.Restaurants.findAll({
     where: {
@@ -75,39 +76,52 @@ app.get("/inexpensive", async (req, res) => {
     reviews: reviews,
   });
 });
+// INEXPENSIVE END
 
+// MODERATE START
 app.get("/Moderate", async (req, res) => {
   const restaurants = await models.Restaurants.findAll({
     where: {
       price: "$$",
     },
   });
+  const reviews = await models.reviews.findAll();
   res.render("pages/Moderate", {
     restaurants: restaurants,
+    reviews: reviews,
   });
 });
+// MODERATE END
 
+// EXPENSIVE START
 app.get("/expensive", async (req, res) => {
   const restaurants = await models.Restaurants.findAll({
     where: {
       price: "$$$",
     },
   });
+  const reviews = await models.reviews.findAll();
   res.render("pages/expensive", {
     restaurants: restaurants,
+    reviews: reviews,
   });
 });
+// EXPENSIVE END
 
+// VERY EXPENSIVE START
 app.get("/veryexpensive", async (req, res) => {
   const restaurants = await models.Restaurants.findAll({
     where: {
       price: "$$$$",
     },
   });
+  const reviews = await models.reviews.findAll();
   res.render("pages/veryexpensive", {
     restaurants: restaurants,
+    reviews: reviews,
   });
 });
+// VERY EXPENSIVE END
 
 app.listen(port, () => {
   console.log(`Listening at http://${localhost}:${port}`);

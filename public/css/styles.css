@@ -67,6 +67,9 @@ a {
     overflow: hidden;
   }
 
+  #reviewerName {
+      font-weight: bold;
+  }
   /* .login-box {
 
   } */
