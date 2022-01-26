@@ -1,17 +1,17 @@
 "use strict";
 
-const { sequelize } = require("../models");
+const sequelize = require("../models");
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return Promise.all([
+    return [
       queryInterface.addColumn("Restaurants", "typeOfFood", {
         type: Sequelize.STRING,
       }),
       queryInterface.addColumn("Restaurants", "picture", {
         type: Sequelize.STRING,
       }),
-    ]);
+    ];
   },
 
   down: async (queryInterface, Sequelize) => {

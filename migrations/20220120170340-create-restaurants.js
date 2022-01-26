@@ -20,9 +20,6 @@ module.exports = {
       stars: {
         type: Sequelize.INTEGER,
       },
-      restaurantid: {
-        type: Sequelize.INTEGER,
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

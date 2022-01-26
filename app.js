@@ -63,20 +63,50 @@ app.get("/login", (req, res) => {
 //     });
 // });
 
-app.get("/inexpensive", (req, res) => {
-  res.render("pages/inexpensive");
+app.get("/inexpensive", async (req, res) => {
+  const restaurants = await models.Restaurants.findAll({
+    where: {
+      price: "$",
+    },
+  });
+  const reviews = await models.reviews.findAll();
+  res.render("pages/inexpensive", {
+    restaurants: restaurants,
+    reviews: reviews,
+  });
 });
 
-app.get("/Moderate", (req, res) => {
-  res.render("pages/Moderate");
+app.get("/Moderate", async (req, res) => {
+  const restaurants = await models.Restaurants.findAll({
+    where: {
+      price: "$$",
+    },
+  });
+  res.render("pages/Moderate", {
+    restaurants: restaurants,
+  });
 });
 
-app.get("/expensive", (req, res) => {
-  res.render("pages/expensive");
+app.get("/expensive", async (req, res) => {
+  const restaurants = await models.Restaurants.findAll({
+    where: {
+      price: "$$$",
+    },
+  });
+  res.render("pages/expensive", {
+    restaurants: restaurants,
+  });
 });
 
-app.get("/veryexpensive", (req, res) => {
-  res.render("pages/veryexpensive");
+app.get("/veryexpensive", async (req, res) => {
+  const restaurants = await models.Restaurants.findAll({
+    where: {
+      price: "$$$$",
+    },
+  });
+  res.render("pages/veryexpensive", {
+    restaurants: restaurants,
+  });
 });
 
 app.listen(port, () => {
