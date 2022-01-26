@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const cookieParser = require("cookie-parser");
-const session = require("express-session");
+const sessions = require("express-session");
 
 // database
 const db = require("./config/database");
@@ -11,10 +11,17 @@ const models = require("./models");
 const res = require("express/lib/response");
 const req = require("express/lib/request");
 
+const myusername = "user1";
+const mypassword = "mypassword";
+let session
+
 // test DB
 db.authenticate()
   .then(() => console.log("database connected.."))
   .catch((err) => console.log("Error: " + err));
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true}))
 
 app.use(express.static("public"));
 app.use(express.static("views"));
@@ -25,7 +32,7 @@ app.set("views", "views");
 
 app.use(cookieParser());
 app.use(
-  session({
+  sessions({
     secret: "secret", //used to sign the cookie
     resave: false, //update session w/ no changes
     saveUninitialized: true, //always create a session
@@ -43,25 +50,34 @@ app.get("/", async (req, res) => {
   });
 });
 
-app.get("/login", (req, res) => {
-  res.render("pages/login");
+
+app.get("/signup", (req, res) => {
+  res.render("pages/signup");
 });
 
-// app.post('/login', (req, res) => {
-//   const username = req.body.username;
-//   const password = req.body.password;
-//   //fake db lookup function
-//   fakeFunctionToGetuserData(username, password)
-//     .then((user) => {
-//       //login success
-//       req.session.user = user;
-//       res.redirect('/dashboard')
-//     })
-//     .catch((err) => {
-//       //login error
-//       res.redirect('/login?login_status=fail');
-//     });
-// });
+
+app.get("/login", (req, res) => {
+  res.render("pages/login");
+})
+
+app.post('/login',(req,res) => {
+  if(req.body.username == myusername && req.body.password == mypassword){
+      session=req.session;
+      session.userid=req.body.username;
+      console.log(req.session)
+      res.send('Welcome to our Site');
+  }
+  else{
+      res.send('Invalid username or password');
+  }
+})
+
+app.get('/logout',(req,res) => {
+  req.session.destroy();
+  res.redirect('/');
+});
+
+
 
 // INEXPENSIVE START
 app.get("/inexpensive", async (req, res) => {
