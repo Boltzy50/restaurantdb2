@@ -28,6 +28,9 @@
                     </h5>
                     <p>
                         <%= restaurant.location %>
+                            <h6 id="reviewerName">Reviews
+                                <%= restaurant.reviews %>
+                            </h6>
                     </p>
                     <p>
                         <% for(let review of reviews) { %>
