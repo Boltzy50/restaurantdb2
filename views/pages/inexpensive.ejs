@@ -28,10 +28,19 @@
                     </h5>
                     <p>
                         <%= restaurant.location %>
-                            <p>
-                                <%= reviews.id %>
-                            </p>
                     </p>
+                    <p>
+                        <% for(let review of reviews) { %>
+                            <% if (review.restaurantid===restaurant.id) {%>
+                                <p>
+                                <h6 id="reviewerName">
+                                    <%= review.name %>
+                                </h6>
+                                <%= review.review %>
+                    </p>
+                    <% } %>
+                        <% } %>
+                            </p>
                 </div>
             </div>
             <% } %>
