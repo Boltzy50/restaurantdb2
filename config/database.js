@@ -3,10 +3,9 @@ const { Sequelize } = require("sequelize");
 module.exports = new Sequelize(
   "restaurant_full_stack",
   "postgres",
-  "password",
+  "J14791g!",
   {
     host: "127.0.0.1",
     dialect: "postgres",
   }
 );
-

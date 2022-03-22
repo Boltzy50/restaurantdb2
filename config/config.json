@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": "password",
+    "password": "J14791g!",
     "database": "restaurant_full_stack",
     "host": "127.0.0.1",
     "dialect": "postgres"
